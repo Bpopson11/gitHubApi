@@ -1,0 +1,6 @@
+.env
+build/css/vendor.css
+build/js
+tmp
+node_modules
+bower_components
