@@ -6,7 +6,7 @@ var browserify = require('browserify');
 var concat = require('gulp-concat');
 var del = require('del');
 var jshint = require('gulp-jshint');
-var sass = require('gulp-sass');
+// var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
@@ -39,7 +39,7 @@ gulp.task('serve', ['buildStart'], function(){
   });
   gulp.watch('./js/*.js', ['jsBrowserify', 'jshint', 'reload']);
   gulp.watch('./*.html', ['reload']);
-  gulp.watch('./scss/*.scss', ['cssBuild', 'reload']);
+  gulp.watch('./css/*.css', [ 'reload']);
   gulp.start('removeTmp');
 });
 /// end of serve task
@@ -64,16 +64,8 @@ gulp.task('buildStart', ['initialClean'], function() {
   gulp.start('buildAll');
 });
 
-gulp.task('buildAll', ['cssBuild', 'bowerBuild', 'jsBrowserify']);
+gulp.task('buildAll', ['bowerBuild', 'jsBrowserify']);
 
-// builds css files
-gulp.task('cssBuild', function() {
-  return gulp.src('scss/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build/css'));
-});
 
 // will run JS and CSS for bower concurrently
 gulp.task('bowerBuild', ['bowerJS', 'bowerCSS']);

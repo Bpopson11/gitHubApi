@@ -1,4 +1,13 @@
-var callMap = require("./../js/map.js").initMap;
+var getRepos = require('./../js/gitHub.js').getRepos;
+var apiKey = require('./../.env').apiKey;
 
 $( document ).ready(function() {
-  google.maps.event.addDomListener(window, 'load', callMap);
+  $('form#search').click(function(event){
+    event.preventDefault();
+    var searchUser = $('input#username').va();
+
+
+
+
+  });
+    });

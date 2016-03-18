@@ -1,1 +1,7 @@
-var apiKey = "071e8d6d83d8d819d1d102c4c4864aed65a9c477";
+exports.getRepos = function(){
+  $.get('https://api.github.com/users/bpopson11?access_token=' + apiKey).then(function(response){
+    console.log(response);
+  }).fail(function(error){
+    console.log(error.responseJSON.message);
+  });
+};
