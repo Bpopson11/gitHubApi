@@ -3,7 +3,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>GitHub Search</title>
@@ -21,11 +21,11 @@
             </form>
           </div>
           <div class="well">
-            <ul id="userDetails">User's Details: </ul>
+            <ul id="userDetails"></ul>
           </div>
         </div>
         <div class="col-sm-6">
-          <h3>User Information</h3>
+          <h3>User Repositories:</h3>
           <div class="well">
             <ul id="userRepos"></ul>
           </div>
