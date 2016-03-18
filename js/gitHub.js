@@ -5,7 +5,7 @@ exports.getRepos = function(username){
     var repos = response;
     $(repos).each(function() {
       $('#userRepos').append('<li><a href="' + this.html_url + '">' + this.name + '</a></li>');
-      $('#userRepos').append('Language Used: ' + this.language);
+      $('#userRepos').append('Primary Language Used: ' + this.language);
       $('#userRepos').append('<br> Date Created: ' + moment.utc(this.created_at).format('LLL') + '</li>');
     });
   }).fail(function(error){
