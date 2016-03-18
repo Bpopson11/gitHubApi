@@ -51,7 +51,7 @@ gulp.task('reload', function() {
 
 // initial clean files
 gulp.task('initialClean', function(){
-  return del(['build/js', 'tmp']);
+  return del(['build', 'tmp']);
 });
 
 // removed tmp file
@@ -95,7 +95,7 @@ gulp.task('bowerCSS', function () {
 
 // Takes concatenated JS and browserify's it
 // using a second arguement with gulp.task, we are passing in an array of task dependencies -> tasks to run first for this task to work
-gulp.task('jsBrowserify' , ['concat'] , function() {
+gulp.task('jsBrowserify' , ['concat', 'jshint'] , function() {
   return browserify({ entries: ['./tmp/allConcat.js']})
   .bundle()
   .pipe(source('app.js'))
