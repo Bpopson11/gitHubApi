@@ -1,6 +1,6 @@
 .env
-build/css/vendor.css
-build/js
+build
+build
 tmp
 node_modules
 bower_components

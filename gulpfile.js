@@ -39,7 +39,7 @@ gulp.task('serve', ['buildStart'], function(){
   });
   gulp.watch('./js/*.js', ['jsBrowserify', 'jshint', 'reload']);
   gulp.watch('./*.html', ['reload']);
-  gulp.watch('./build/css/*.css', ['cssBuild', 'reload']);
+  gulp.watch('./scss/*.scss', ['cssBuild', 'reload']);
   gulp.start('removeTmp');
 });
 /// end of serve task
