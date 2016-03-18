@@ -19,8 +19,8 @@ exports.getUser = function(username){
     var userCreate = response.created_at;
     var lastUpdate = response.updated_at;
     $('#userDetails').append('<li><a href="'+ response.html_url +'">' + userName + '</a>');
-    $('#userDetails').append('<img width=200px src=' + userAvatar+ '>');
-    $('#userDetails').append('<li><a href="'+ response.html_url +'">' + response.name + '</a>');
+    $('#userDetails').append('<img class="avatar" width=100px src=' + userAvatar + '>');
+    $('#userDetails').append(lastUpdate + '</li>');
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
