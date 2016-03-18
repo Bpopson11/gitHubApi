@@ -2,12 +2,9 @@ var getRepos = require('./../js/gitHub.js').getRepos;
 var apiKey = require('./../.env').apiKey;
 
 $( document ).ready(function() {
-  $('form#search').click(function(event){
+  $('form#search').submit(function(event){
     event.preventDefault();
-    var searchUser = $('input#username').va();
-
-
-
-
+    var searchUser = $('#username').val();
+    var resultName = getRepos(searchUser);
   });
     });
