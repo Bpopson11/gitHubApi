@@ -1,6 +1,5 @@
 .env
 build
-build
 tmp
 node_modules
 bower_components

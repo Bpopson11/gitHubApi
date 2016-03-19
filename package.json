@@ -1,7 +1,6 @@
 {
   "name": "github",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +12,7 @@
     "prompt": "^1.0.0"
   },
   "devDependencies": {
+    "bower-files": "^3.11.3",
     "browser-sync": "^2.11.1",
     "browserify": "^13.0.0",
     "del": "^2.2.0",
@@ -25,5 +25,17 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.1",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bpopson11/gitHubApi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bpopson11/gitHubApi/issues"
+  },
+  "homepage": "https://github.com/Bpopson11/gitHubApi#readme",
+  "keywords": [
+    "\u001b[Z\u001b[A\u001b[A\u001b[C\u001b[C\u001b[B\u001b[C\u001b[B"
+  ],
+  "description": ""
 }
