@@ -46,3 +46,9 @@ exports.getGist = function(username){
     console.log(error.responseJSON.message);
   });
 };
+
+exports.resetFields = function(){
+   $('#userDetails').empty();
+   $('#userGists').empty();
+   $('#userRepos').empty();
+};
