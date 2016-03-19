@@ -6,7 +6,7 @@ var browserify = require('browserify');
 var concat = require('gulp-concat');
 var del = require('del');
 var jshint = require('gulp-jshint');
-// var sass = require('gulp-sass');
+var sass = require('gulp-sass');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
@@ -39,7 +39,7 @@ gulp.task('serve', ['buildStart'], function(){
   });
   gulp.watch('./js/*.js', ['jsBrowserify', 'jshint', 'reload']);
   gulp.watch('./*.html', ['reload']);
-  gulp.watch('./css/*.css', [ 'reload']);
+  gulp.watch('./scss/*.scss', ['cssBuild', 'reload']);
   gulp.start('removeTmp');
 });
 /// end of serve task
@@ -64,7 +64,7 @@ gulp.task('buildStart', ['initialClean'], function() {
   gulp.start('buildAll');
 });
 
-gulp.task('buildAll', ['bowerBuild', 'jsBrowserify']);
+gulp.task('buildAll', ['bowerCSS', 'bowerBuild', 'jsBrowserify']);
 
 
 // will run JS and CSS for bower concurrently
@@ -84,6 +84,17 @@ gulp.task('bowerCSS', function () {
     .pipe(concat('vendor.css'))
     .pipe(gulp.dest('./build/css'));
 });
+
+
+// builds css files
+ -gulp.task('cssBuild', function() {
+ -  return gulp.src('scss/*.scss')
+ -    .pipe(sourcemaps.init())
+ -    .pipe(sass())
+ -    .pipe(sourcemaps.write())
+ -    .pipe(gulp.dest('./build/css'));
+ -});
+
 
 // Takes concatenated JS and browserify's it
 // using a second arguement with gulp.task, we are passing in an array of task dependencies -> tasks to run first for this task to work
