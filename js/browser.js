@@ -4,7 +4,6 @@ var getGist = require('./../js/gitHub.js').getGist;
 var resetFields = require('./../js/gitHub.js').resetFields;
 var apiKey = require('./../.env').apiKey;
 
-console.log(apiKey);
 
 $( document ).ready(function() {
   $('form#search').submit(function(event){
@@ -15,4 +14,4 @@ $( document ).ready(function() {
     var resultUser = getUser(searchUser);
     var resultGist = getGist(searchUser);
   });
-    });
+});

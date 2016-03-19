@@ -33,7 +33,6 @@ exports.getUser = function(username){
   });
 };
 
-////user gist
 exports.getGist = function(username){
   $.get('https://api.github.com/users/' + username + '/gists' +'?access_token=' + apiKey).then(function(response){
     var gists = response;
