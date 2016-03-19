@@ -87,13 +87,13 @@ gulp.task('bowerCSS', function () {
 
 
 // builds css files
- -gulp.task('cssBuild', function() {
- -  return gulp.src('scss/*.scss')
- -    .pipe(sourcemaps.init())
- -    .pipe(sass())
- -    .pipe(sourcemaps.write())
- -    .pipe(gulp.dest('./build/css'));
- -});
+ gulp.task('cssBuild', function() {
+  return gulp.src('scss/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./build/css'));
+ });
 
 
 // Takes concatenated JS and browserify's it
