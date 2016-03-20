@@ -1,23 +1,24 @@
-$grey: #d6dfc2;
-$bright_blue: #9fedd4;
-$teal: #44af92;
-$navy: #016367;
+$grey: #c7c9a9;
+$soft_green: #7e8341;
+$green: #9ea868;
+$dark_olive: #4d4729;
 
 body {
   background-color: $grey;
-  color: $navy;
+  color: $dark_olive;
+  font-size: 15px;
 }
 
 .well {
-  background-color: $teal;
+  background-color: $green;
 }
 
 .btn {
-  background-color: $bright_blue;
+  background-color: $soft_green;
 }
 
 .a {
-  color: $navy;
+  color: $dark_olive;
 }
 
 .li {
