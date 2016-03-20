@@ -64,7 +64,7 @@ gulp.task('buildStart', ['initialClean'], function() {
   gulp.start('buildAll');
 });
 
-gulp.task('buildAll', ['bowerCSS', 'bowerBuild', 'jsBrowserify']);
+gulp.task('buildAll', ['bowerCSS', 'bowerBuild', 'jsBrowserify', 'cssBuild']);
 
 
 // will run JS and CSS for bower concurrently
