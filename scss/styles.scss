@@ -11,3 +11,11 @@ body {
 .well {
   background-color: $teal;
 }
+
+.btn {
+  background-color: $bright_blue;
+}
+
+.user , .repos {
+  display: none;
+}

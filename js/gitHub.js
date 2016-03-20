@@ -12,6 +12,7 @@ exports.getRepos = function(username){
       }
       $('#userRepos').append('Primary Language Used: ' + this.language);
       $('#userRepos').append('<br> Date Created: ' + moment.utc(this.created_at).format('LLL') + '</li>');
+      $('#repos').show();
     });
   }).fail(function(error){
     console.log(error.responseJSON.message);
