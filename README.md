@@ -1,10 +1,8 @@
-# gitHubApi
-Javascript Week 1 Code Review
 # _GitHub Search_
 
 #### _Using a GitHub API this app allows the user to search GitHub by username._
 
-#### By _**Bri Popson**_
+#### By _**Brianna Popson**_
 
 ## Description
 
@@ -12,12 +10,16 @@ _The purpose of this app is to allow the user to search GitHub. A viable search 
 
 ## Setup/Installation Requirements
 
-* _Fork or clone from GitHub_
-* _Please create a separate branch if you cloned_
+* _Clone this repository_
+* _Open a shell (terminal on mac) and navigate to the top level of the project directory._
 * _Open the folder in a text editor like Atom to view the code_
-* _In a terminal on your comuter like Terminal(Apple) or GitBash(Microsoft) insert "npm install" in the top level of the project folder.
-* _Next run "bower install". All appropriate files will be installed based on JSON files saved in the code._
+* _Then run `npm install` and `bower install`. All appropriate files will be installed based on JSON files saved in the code._
 * _While still in the top level of the project folder, type "guilp buildAll" followed by "gulp serve". This will open the page up in whatever internet brower you were using last._
+* _Secure a GitHub API key (or in this cas an Access Token) by going to your GitHub profile's settings page._
+* _You can generate your key by navigating to the Personal Access Token section._
+* _Leave all checkboxes for the key generation blank._
+* _Insert your Personal Access Token into the "Placeholder" in the .env file._
+* _IMPORTANT: When pushing your commits back to the repository, make sure to have added .env to the .gitignore_
 
 ## Known Bugs
 _Sometimes building the data seems to take one or more tries. If the browser loads and there's no styling on the page, please cancel the server using ctrl + c and run the "buildAll" command again, then run "gulp serve"._
@@ -30,4 +32,4 @@ _This app was built in Javascript using Node.js, Bower, Gulp, and Sass_
 
 *MIT License*
 
-Copyright (c) 2016 **_Bri Popson_**
+Copyright (c) 2016 **_Brianna Popson_**
